@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+    int main()
+    {
+        //declaraÃ§Ã£o das variÃ¡veis
+        float  np1, np2 , pim, media;
+
+
+        //Entrada de dados
+        printf("Digite a nota da NP1:");
+        scanf("%f", & np1);
+
+        printf("Digite a nota da NP2:");
+        scanf("%f", &np2);
+
+        printf("Digite a nota do PIM:");
+        scanf("%f", &pim);
+
+
+
+        //processamento
+       media = (np1 + np2 + pim)/ 3;
+       printf("Nota final: %.1f\n", media);
+        if(media>5){
+            printf("Aprovado");
+
+       }else{
+            printf("Reprovado)")
+       }
