@@ -1,0 +1,2122 @@
+Nome: André Kaique Dell Isola        RA: N8450E7             Turma: DS2A33
+Linguagens e Técnicas de Programação (Professora Vanessa Nessa)
+Lista de exercícios
+Laboratório 1
+1. Desenvolva as instruções para somar dois números inteiros.
+#include <stdio.h>
+#include <stdlib.h>
+
+//Para caracteres especiais
+#include <locale.h>
+
+int main()
+{
+    //Para caracteres especiais
+    setlocale(LC_ALL,"");
+
+    //Criar as variaveis
+    int x, y;
+    int sm;
+
+    //Entrada
+    printf("Digite um numero inteiro:\n ");
+    scanf("%d", &x);
+
+    printf("Digite um numero inteiro:\n");
+    scanf("%d", &y);
+
+    //Processamento
+    sm= x + y;
+
+    //Saida
+    printf("A soma dos numeros %d + %d = %d \n", x, y, sm);
+    return 0;
+}
+2. Desenvolva a lógica para um programa que efetue o cálculo da área de um quadrado.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int lado, area;
+
+    printf("Digite o valor do lado: \n");
+    scanf("%d", &lado);
+
+    area= lado * lado;
+
+    printf("O valor do quadrado foi: %d \n", area);
+    return 0;
+}
+3. Desenvolva a lógica para um programa que efetue o cálculo da área de uma circunferência apresentando a medida calculada.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int lado, area;
+
+    printf("Digite o valor do lado: \n");
+    scanf("%d", &lado);
+
+    area= lado * lado;
+
+    printf("O valor do quadrado foi: %d \n", area);
+    return 0;
+}
+4. Calcular e apresentar o valor do volume de um cilindro.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float raio, altura, area;
+
+    printf("Digite o valor do raio: \n");
+    scanf("%f", &raio);
+
+    printf("Digite o valor da altura: \n");
+    scanf("%f", &altura);
+
+    area= 3.14 * raio * raio * altura;
+
+    printf("O valor do cilindro foi: %.2f \n", area);
+    return 0;
+}
+5. Ler a temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é F = (9 * C + 160) / 5.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float c, f;
+
+    printf("Digite o grau celsius: \n");
+    scanf("%f", &c);
+
+    f= (9 * c + 160)/5;
+
+    printf("O valor do grau em fahrenheit foi: %.2f \n", f);
+    return 0;
+}
+6. Efetuar o cálculo do valor de uma prestação em atraso, utilizando a fórmula: prestação = valor + (valor * (taxa/100) * tempo.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int taxa;
+    float prestacao, valor, tempo;
+
+    printf("Digite o numero da taxa: \n");
+    scanf("%d", &taxa);
+
+    printf("Digite o numero do valor: \n");
+    scanf("%f", &valor);
+
+    printf("Digite o numero do tempo: \n");
+    scanf("%f", &tempo);
+
+    prestacao= valor +(valor * (taxa/100)*tempo);
+
+    printf("A prestacao foi: %.2f \n", prestacao);
+    return 0;
+}
+7. Ler dois números e apresentar a diferença do maior pelo menor.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num1, num2;
+
+    printf("Digite o numero 1 inteiro: \n");
+    scanf("%d", &num1);
+
+    printf("Digite o numero 2 inteiro: \n");
+    scanf("%d", &num2);
+
+    if(num1>num2){
+       printf("O numero 1 e maior que o numero 2 \n");
+    }else{
+       printf("O numero 2 e maior que o numero 1 \n");
+    }
+    return 0;
+}
+8. Ler dois valores referentes as notas escolares de um aluno e apresentar se ele foi “reprovado” ou “aprovado”.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float nota1, nota2, media;
+
+    printf("Digite a nota 1: \n");
+    scanf("%f", &nota1);
+
+    printf("Digite a nota 2: \n");
+    scanf("%f", &nota2);
+
+    media=(nota1+nota2)/2;
+
+    if(media>5){
+        printf("Aluno aprovado \n");
+    }else{
+        printf("Aluno reprovado \n");
+    }
+    printf("A sua media final foi %.2f \n", media);
+    return 0;
+}
+9. Ler os valores referentes as notas escolares de um aluno e apresentar se ele foi “reprovado” ou “aprovado”. Considere a regra da cálculo de nota da UNIP.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float nota1, nota2, pim, media;
+
+    printf("Digite a nota 1: \n");
+    scanf("%f", &nota1);
+
+    printf("Digite a nota 2: \n");
+    scanf("%f", &nota2);
+
+    printf("Digite a nota do pim: \n");
+    scanf("%f", &pim);
+
+
+    media=(nota1 * 4 + nota2 * 4 + pim * 2)/10;
+
+    if(media>5){
+        printf("Aluno aprovado \n");
+    }else{
+        printf("Aluno reprovado \n");
+    }
+    printf("A sua media final foi %.2f \n", media);
+    return 0;
+}
+10. Efetuar a leitura de 3 número e informar o maior e o menor deles.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int num1, num2, num3;
+
+   printf("Digite o numero 1: \n");
+   scanf("%f", &num1);
+
+   printf("Digite o numero 2: \n");
+   scanf("%f", &num2);
+
+   printf("Digite o numero 3: \n");
+   scanf("%f", &num3);
+
+   if (num1 > num2 && num1 > num3){
+        printf ("O maior numero e o 1 \n");
+   }else{
+       if (num2 > num1 && num2 > num3){
+            printf ("O maior numero e o 2 \n");
+       }else{
+            printf ("O maior numero e o 3 \n");
+            }
+        }
+        return 0;
+}
+11. Efetuar a leitura de 3 número e apresentar em ordem crescente.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+   {
+        int a, b, c;
+        scanf("%d", &a);
+        scanf("%d", &b);
+        scanf("%d", &c);
+        if (a < b)                                                               // a>b
+           if (b < c) printf("%4d%4d%4d\n", a, b, c);         // a>b>c
+           else                                             // a>b,c>=b
+               if (a < c) printf("%4d%4d%4d\n", a, c, b);     // a>c>=b
+               else printf("%4d%4d%4d\n", c, a, b);           // c>=a>b
+       else                                                 // b>=a
+           if (b < c)                                       // b>=a,b>c
+               if (a < c) printf("%4d%4d%4d\n", b, a, c);     // b>=a>c
+               else printf("%4d%4d%4d\n", b, c, a);           // b>c>=a
+           else printf("%4d%4d%4d\n", c ,b, a);               // c>=b>=a
+       return 0;
+   }
+12. Efetuar a leitura de 1 número e informar se ele é divisível por 2 e 3.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num;
+
+    printf("Digite um valor qualquer: ");
+    scanf("%d", &num);
+
+    if(num % 2 == 0 || num % 3 == 0){
+        printf("Divisivel por 2, 3 \n");
+    }else{
+        printf("Nao divisivel por 2, 3 \n");
+    }
+    return 0;
+}
+Laboratório 2
+Estrutura de Repetição com Teste no Início
+1. Dada a quantidade de alunos de uma turma, calcular a média semestral de cada aluno da turma e mostrar uma mensagem para os alunos aprovados.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int qtde_alunos, contador;
+    float nota1, nota2, media;
+
+    printf("Digite as quantidades de alunos: \n");
+    scanf("%d", &qtde_alunos);
+
+    contador=1;
+
+    while(contador <= qtde_alunos){
+            printf("Digite as notas do aluno %d \n", contador);
+
+            printf("Digite a nota 1: \n");
+            scanf("%f", &nota1);
+
+            printf("Digite a nota 2: \n");
+            scanf("%f", &nota2);
+
+            media= (nota1 + nota2)/2;
+
+            if(media>5){
+                printf("Aprovado \n\n");
+            }else{
+                printf("Reprovado \n\n");
+            }
+            printf("A media do aluno foi: %.2f \n\n", media);
+
+            contador++;
+            }
+            return 0;
+}
+2. Dado um número inteiro positivo n, imprimir os n primeiros naturais ímpares. Exemplo: Para n = 4, a saída deverá ser 1, 3, 5, 7. Escreva um algoritmo e, em seguida, implemente-o em Linguagem C.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num, impar, contador, primeiro;
+
+    printf("Digite a quantidade de numeros: \n");
+    scanf("%d", &num);
+
+    primeiro=1;
+    impar=1;
+
+    printf("Os %d primeiros numeros impares sao: \n", num);
+    printf("%d \n", primeiro);
+    contador=1;
+
+    while(contador < num){
+            impar= impar + 2;
+            printf("%d \n", impar);
+
+            contador++;
+    }
+    return 0;
+}
+3. Escrever um programa em linguagem C que resolva o problema a seguir: Uma pesquisa sobre a população de uma determinada região coletou os seguintes dados, referentes a cada habitante, para serem analisados:
+- Idade (em anos)
+- sexo (m-masculino, f-feminino) 
+-  Para cada habitante são informados os dados acima.
+ - A fim de indicar o final da entrada, após a seqüência de dados dos habitantes, o usuário entrará com o valor -1 para a idade, o que deve ser interpretado pelo algoritmo como fim de entrada. Encontrar a maior idade de um conjunto de indivíduos e o percentual de indivíduos do sexo feminino com idade entre 18 e 35 anos.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int sexo=0, idade=0, grupo=0;
+
+    do{
+        printf("Digite o sexo, sendo valor 1 para feminino e o valor diferente para masculino: \n");
+        scanf("%d", &sexo);
+        printf("Digite a idade: \n");
+        scanf("%d", &idade);
+
+        if(idade>=18 && idade <=35 && sexo == 1){
+            grupo= grupo + 1;
+            }
+    }while(idade!=-1);
+
+    printf("A quantidade de mulheres entre 18 a 35 anos e de: %d \n", grupo);
+    return 0;
+}
+4. Ler um número inteiro n, que não contém dígito 0, e escrever um número inteiro m que corresponde ao número n invertido. Por exemplo, se n igual a 123, a saída será m igual a 32.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, m;
+
+    printf("Digite o numero m: \n");
+    scanf("%d", &m);
+
+    if (m >= 0){
+        do{
+            n = m % 10;
+            printf("%d", n);
+            m /= 10;
+        } while(m != 0);
+        printf("\n");
+    }
+        return 0;
+}
+5. Escreva um algoritmo que leia um número inteiro e positivo representando um número binário, determine o seu equivalente decimal. Exemplo: Dado 10010 a saída será 18, pois 1. 2 4 + 0. 23 + 0. 2 2 + 1. 2 1 + 0. 2 0 = 1.
+#include <stdio.h>
+#include <stdlib.h>
+
+int bin_to_dec(int bin)
+{
+    int total =0;
+    int potenc=1;
+
+    while(bin > 0){
+          total += bin % 10 * potenc;
+          bin = bin /10;
+          potenc = potenc * 2;
+          fprintf(stderr, "while \n");
+          }
+          return total;
+
+}
+
+int main(void)
+{
+    int dec=0;
+    int bin=0;
+
+    printf("Entre com um inteiro (0 e 1): \n");
+    scanf("%d", &bin);
+
+    dec = bin_to_dec(bin);
+
+    printf("Bin = %d , Dec= %d \n", bin, dec);
+    return 0;
+}
+6. Faça um programa em Linguagem C que leia 5 valores inteiros e positivos e exiba: O maior valor, o menor valor e a média aritmética dos números lidos.
+#include<stdio.h>
+int main()
+{
+ int valor[5], i, soma=0;
+ float media;
+
+ for(i=0; i<5; i++)
+ {
+ printf("Qual o %do valor?\n ", i+1);
+ scanf("%d", &valor[i]);
+ soma=soma+valor[i];
+ }
+
+ media=soma/5.;
+
+ printf("A media vale: %.2f", media);
+
+ printf("\nOs seguintes valores sao maiores que a media: \n");
+ for(i=0; i<5; i++)
+ if(valor[i]>media)
+ printf("%d\n", valor[i]);
+ printf("\nOs seguintes valores sao menores que a media: \n");
+ for(i=0; i<5; i++)
+ if(valor[i]<media)
+ printf("%d\n", valor[i]);
+
+ getch();
+}
+7. Dados valores B e E, de base e expoente, exibir B E, sem usar nenhuma função pronta.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float base, expoente, total;
+    int contador;
+
+    printf("Me imforme o numero da base: \n");
+    scanf("%f", &base);
+
+    printf("Me informe o numero do expoemte: \n");
+    scanf("%f", &expoente);
+
+    contador=0;
+    total=1;
+
+    while(contador != expoente){
+        total= total*base;
+
+        contador++;
+        }
+        printf("O resultado e %.1f \n", total);
+        return 0;
+}
+8. Dados inteiros positivos N e M, exiba o resultado de N*M, sem usar o operador *.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int i, m, n, r = 0;
+
+    printf("Digite dois valores: ");
+    scanf("%d%d", &m, &n);
+
+    for(i = 1; i <= m; i++)
+        r += n;
+
+    printf("%d * %d = %d\n\n", m, n, r);
+}
+9. Dados 5 valores inteiros positivos, exiba quantos desses valores são múltiplos de 7 e quantos são pares.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int i;
+
+    for(i = 7; i <= 9999; i+=7)
+        printf("%4d ", i);
+
+    return 0;
+}
+10. Verificar se um número é palíndromo.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+
+/* Usaremos três variáveis apenas */
+int normal, invertido, aux;
+printf("Digite o valor n:");
+scanf("%d", &normal);
+
+/* Consistência de N (Não pode ser menor ou igual a zero) */
+while (normal <= 0) {
+printf("Por favor, digite um valor de n maior do que zero: \n");
+scanf("%d", &normal);
+}
+
+invertido = 0; // Deve começar valendo zero, a ideia é construir o número a partir do resto da divisão do normal por 10
+aux = normal; // Como devemos comparar os valores normal e invertido, devemos preservar o valor normal e usar essa variável auxiliar para modificações
+
+/* Construção do número invertido */
+while (aux > 0) {
+invertido = (invertido*10) + (aux % 10);
+aux = aux / 10;
+}
+
+printf("\nNumero normal: %d\nNumero invertido: %d\n", normal, invertido);
+
+if (normal == invertido){
+    printf("Sao palindromos.\n\n");
+}else{
+printf("Nao sao palindromos.\n\n");
+}
+system("Pause");
+return 0;
+}
+Laboratório 3
+Estrutura de Repetição com Teste no Final
+1. Leia o ano de nascimento de uma pessoa viva; só aceite valores “razoáveis”. Imprima o valor do ano e se ele é ou não ano bissexto.
+ • Entende-se por “razoavel” por exemplo: 
+• número inteiro; • anos anteriores ou igual ao ano atual; 
+• é razoável considerar que alguém viva até 130 anos? 
+• Considere que um ano múltiplo de quatro é bissexto.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int data;
+do {
+printf("Digite o ano de nascimento: ");
+scanf("%d",&data);
+if (((data>=1902) && (data<=2022))){
+if (data % 4 == 0){
+printf("Ano bissexto!\n\n");
+Lista de Exercicios 3 2
+} else {
+printf("Ano nao eh bissexto!\n\n");
+}
+}
+} while ((data>=1902) && (data<=2022));
+printf("\n\nData invalida - Programa encerrado");
+return 0;
+}
+2. Ler um número inteiro n. Escrever a soma de todos os números de 1 até n.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int num,soma=0,i=1;
+printf("Digite um numero inteiro: ");
+scanf("%d",&num);
+do {
+ soma = soma + i;
+ i++;
+} while (i <= num);
+printf("Soma: %d",soma);
+return 0;
+}
+3. Ler um número inteiro n. Escrever a soma de todos os números pares de 2 até n.
+#include <stdio.h>
+#include <stdlib.h> 
+int main()
+{
+int num,soma=0,i=0;
+printf("Digite um numero inteiro: ");
+scanf("%d",&num);
+do {
+ if (i % 2 == 0){
+ soma = soma + i;
+ }
+ i++;
+}while (i <= num);
+printf("A soma dos pares: %d",soma);
+return 0;
+}
+4. Ler um número inteiro n. Decidir se n é um número primo e apresente o resultado.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+Lista de Exercicios 3 4
+{
+int num,cont=0; //cont é o contador de divisores do num
+printf("Digite um numero : ");
+scanf("%d",&num);
+int i=1;
+do{
+ if (num%i==0){
+ cont++;
+ }
+ i++;
+} while (i<=num);
+if (cont == 2) printf("O numero %d eh primo\\n",num);
+else printf("O numero %d nao eh primo\\n",num);
+return 0;
+}
+5. Escreva um programa que apresente quatro opções: (a) consulta saldo, (b) saque e (c) depósito e (d) sair. O saldo deve iniciar em R$ 0,00. A cada saque ou depósito o valor do saldo deve ser atualizado e apresentado.
+#include<stdio.h>
+#include <stdlib.h> 
+int main()
+{
+float saldo=0,val_dep,val_saque;
+char opcao;
+printf("Bem vindo! Seu saldo inicial eh: R$ 0,00\n\n");
+do {
+printf("Digite a letra indicada para a opcao que desejar utilizar:\\n\\n\\nConsultar Saldo >
+a <\\nSaque > b <\\nDeposito > c <\\nSair > d < ");
+printf("\\n\\nOpcao: ");
+fflush(stdin);
+scanf("%c",&opcao);
+ if (opcao == 'c'){
+ printf("\\nDEPOSITO\\n");
+ printf("\\nDigite o valor que deseja depositar:");
+ printf("R$ ");
+ scanf("%f",&val_dep);
+ saldo = saldo + val_dep;
+ printf("Seu Saldo atual eh: R$ %.2f\\n\\n",saldo);
+ //break;
+ }
+ if (opcao == 'b'){
+ printf("\\nSAQUE\\n");
+ printf("\\nDigite o valor que deseja sacar:");
+ printf("R$ ");
+ scanf("%f",&val_saque);
+ saldo = saldo - val_saque;
+ //break;
+ printf("Seu Saldo atual eh: R$ %.2f\\n\\n",saldo);
+ }
+ if (opcao == 'a') printf("Seu Saldo atual eh: R$ %.2f\\n\\n",saldo);//break;
+}while (opcao != 'd');
+printf("\\n\\n\\n\\nSAIR ----- Programa encerrado! Pressione ENTER PARA FECHAR");
+return 0;
+}
+Estrutura de Repetição com Variável de Controle
+1. Calcular e exibir a soma de todos os números pares desde 100 até 200, inclusive, utilizando uma instrução condicional para determinar se o número é par.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int soma=0;
+for (int i=100;i<=200;i++){
+if(i % 2 == 0){
+soma = soma + i;
+}
+printf("%d\n",soma);
+}
+return 0;
+}
+2. Resolver o problema anterior variando o PASSO para que a incrementação seja feita de duas em duas unidades.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int soma=0;
+for (int i=100;i<=200;i+=2/só muda isso aq msm--'/){
+soma = soma + i;
+printf("%d\n",soma);
+}
+return 0;
+}
+3. Considere a seguinte definição para resolver o próximo exercício:
+Dado um número natural N maior ou igual a zero, o fatorial de N (escreve-se N!) é definido como:
+Se N = 0, 0! = 1 (por definição);
+Se N > 0, N! = 1 x 2 x 3 x ... x (N – 1) x N
+Dado um número inteiro e positivo, calcular o seu fatorial. Fatorial é o produto dos números naturais desde 1 até o inteiro n.
+Faça a validação se o número digitado pelo usuário é positivo.
+Por exemplo, para n = 5, o algoritmo deverá executar as multiplicações sucessivas e acumulá-las a fim de possuir o valor 120 após 5 passos 
+5! = 1 x 2 x 3 x 4 x 5 = 120
+#include <stdio.h>
+#include <stdlib.h> 
+int main()
+{
+int mult=1,num;
+printf("Digite o numero para calcular o fatorial: ");
+scanf("%d",&num);
+for (int i=1;i<=num;i++){
+mult = mult * i;
+}
+printf("O resultado eh: %d\n",mult);
+return 0;
+}
+4. Uma pessoa aplicou seu capital a juros e deseja saber, trimestralmente, a posição de seu investimento inicial c. Chamando de i a taxa de juros do trimestre, escrever uma tabela que forneça, para cada trimestre, o rendimento auferido e o saldo acumulado durante o período de x anos, supondo que nenhuma retirada tenha sido feita.
+#include <stdio.h>
+#include <stdlib.h>
+
+nt main()
+{
+Lista de Exercicios 3 9
+float c,i=0.15,rend_trim,rend_total; //c = investimento inicial // i = taxa de juros //
+int x=0;// periodo em anos
+printf("\\nDigite o valor inicial do seu investimento : R$");
+scanf("%f",&c);
+printf("\\nDigite o tempo (em anos) para acompanhar os rendimentos
+trimestralmente ");
+scanf("%d",&x);
+int y = x*4;// quantidade de trimestres
+for(int j=1;j<=y;j++){ //contador criado para executar o laço de acordo com o numero
+de trimestres fornecido //
+ rend_trim = rend_trim + (c * i); // O rendimento trimestral se acumula somado
+ao valor do investimento inical * taxa de juros //
+ printf("Rendimento do Trimestre numero %d: +%.2f\\n",j,rend_trim);
+}
+printf("\\n");
+printf("O rendimento acumulado trimestralmente foi: R$%.2f\\n",rend_trim);
+rend_total = c + rend_trim;
+printf("\\nO seu investimento inicial de R$%.2f durante %d anos\\nrendendo a uma
+taxa de %.4f%% se tornou R$%.2f\\n",c,x,i,rend_total);
+printf("\\n\\n\\n");
+return 0;
+}
+Laboratório 4
+Seleção de múltipla escolha
+1. Crie um programa que exibe se um dia é dia útil, fim de semana ou dia inválido dado o número referente ao dia. Considere que domingo é o dia 1 e sábado é o dia 7.
+#include <stdio.h>
+#include <stdlib.h> 
+int main()
+{
+int dia;
+printf("Digite o numero do dia da semana: ");
+scanf("%d",&dia);
+switch(dia){
+case 1:
+printf("Domingo -- Dia NAO Util");
+break;
+case 2:
+printf("Segunda -- Dia Util");
+break;
+case 3:
+printf("Terca -- Dia Util");
+break;
+case 4:
+printf("Quarta -- Dia Util");
+break;
+case 5:
+printf("Quinta -- Dia Util");
+break;
+case 6:
+printf("Sexta -- Dia Util");
+break;
+case 7:
+printf(" Sabado-- Dia NAO Util");
+break;
+default:
+printf("Entrada invalida");
+break;
+}
+return 0;
+}
+2. Construa um algoritmo que receba um número inteiro de 1 à 12 e apresente o mês referente.
+#include <stdio.h>
+#include <stdlib.h>
+
+nt main()
+{
+int mes;
+printf("Digite o numero do mes: ");
+scanf("%d",&mes);
+switch(mes){
+case 1:
+printf("Janeiro");
+break;
+case 2:
+printf("Fevereiro");
+break;
+case 3:
+printf("Marco");
+break;
+case 4:
+printf("Abril");
+break;
+case 5:
+printf("Maio");
+break;
+case 6:
+printf("Junho");
+break;
+case 7:
+printf("Julho");
+break;
+case 8:
+printf("Agosto");
+break;
+case 9:
+printf("Setembro");
+break;
+case 10:
+printf("Outubro");
+break;
+case 11:
+printf("Novembro");
+break;
+case 12:
+printf("Dezembro");
+break;
+default:
+printf("Entrada invalida");
+break;
+}
+return 0;
+}
+3. Construa um algoritmo que, tendo como dados de entrada o preço de um produto e seu código de origem, mostre o preço do produto e a região de origem. Caso o código não seja nenhum especificado, o produto deve ser encarado como importado. Siga a tabela abaixo:
+ Código de Origem | Procedência
+ 1 ------------- Sul
+ 2 ------------- Norte
+ 3 ------------- Leste
+ 4 ------------- Oeste
+ 5 ou 6 -------- Nordeste
+ 7,8 ou 9 ------- Sudeste
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+float preco;
+int orig;
+printf("Digite o preco do produto: R$ ");
+scanf("%f",&preco);
+printf("Digite o codigo de origem: ");
+scanf("%d",&orig);
+switch(orig){
+case 1:
+printf("Preco do Produto: R$%.2f\n",preco);
+printf("Procedencia Sul");
+break;
+case 2:
+printf("Preco do Produto: R$%.2f\n",preco);
+printf("Procedencia Norte");
+break;
+case 3:
+printf("Preco do Produto: R$%.2f\n",preco);
+printf("Procedencia Leste");
+break;
+case 4:
+printf("Preco do Produto: R$%.2f\n",preco);
+printf("Procedencia Oeste");
+break;
+case 5:
+case 6:
+printf("Preco do Produto: R$%.2f\n",preco);
+printf("Procedencia Nordeste");
+break;
+case 7:
+case 8:
+case 9:
+printf("Preco do Produto: R$%.2f\n",preco);
+printf("Procedencia Sudeste");
+break;
+default:
+printf("Produto Importado");
+break;
+}
+return 0;
+}
+4. Dados o tipo de combustível e a quantidade de litros, calcule e exiba o valor a ser pago, seguindo:
+Combustível ----- Preço por Litro
+A – Alcool ----- 1,7997
+D – Diesel ----- 0,9798
+G - Gasolina ----- 2,1009
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+float preco,lit;
+char tipo;
+printf("Digite o tipo de combustivel: ");
+fflush(stdin);
+scanf("%c",&tipo);
+printf("Digite a quantidade de litros: ");
+scanf("%f",&lit);
+switch (tipo){
+case 'g':
+preco = lit * 2.1009;
+printf("Preco a pagar eh: R$%.2f",preco);
+break;
+case 'd':
+preco = lit * 0.9798;
+printf("Preco a pagar eh: R$%.2f",preco);
+break;
+case 'a':
+preco = lit *1.7997;
+printf("Preco a pagar eh: R$%.2f",preco);
+break;
+default:
+printf("Entrada invalida");
+break;
+}
+return 0;
+}
+5. Numa agência de correio existem apena selos de 3 e 5 centavos, e tarifas entre 8 e 15 centavos. Dado um valor de tarifa, informe a menor quantidade necessária de selos de 3 e 5 centavos.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int tari;
+printf("Digite o valor da tarifa: ");
+scanf("%d",&tari);
+switch(tari){
+case 8:
+printf("Um selo de 3 e Um selo de 5");
+break;
+case 9:
+printf("Tres selos de 3");
+break;
+case 10:
+printf("Dois selos de 5");
+break;
+case 11:
+printf("Dois selos de 3 e Um selo de 5");
+break;
+case 12:
+printf("Quatro selos de 3");
+break;
+case 13:
+printf("Um selo de 3 e Dois selos de 5");
+break;
+case 14:
+printf("Tres selos de 3 e Um selo de 5");
+break;
+case 15:
+printf("Tres selos de 5");
+break;
+default:
+printf("Tarifa invalida");
+}
+return 0;
+}
+6. Desenvolva uma calculadora que receba dois números e um operador (+, -, *, /). Apresentar o resultado da operação conforme o exemplo: num1 + num2 = resultado_da_soma. Observação: Pense nos possíveis erros de entrada.
+#include <stdio.h>
+#include <stdlib.h>
+
+nt main()
+{
+float n1,n2,result;
+char op;
+printf("Digite o primeiro numero: ");
+scanf("%f",&n1);
+printf("Escolha a operacao: ");
+fflush(stdin);
+scanf("%c",&op);
+printf("Digite o segundo numero: ");
+scanf("%f",&n2);
+switch(op){
+case '+':
+result = n1 + n2;
+printf("%.2f",result);
+break;
+case '-':
+result = n1 - n2;
+printf("%.2f",result);
+break;
+case '*':
+result = n1 * n2;
+printf("%.2f",result);
+break;
+case '/':
+if (n2 == 0){
+printf("Entrada invalida");
+}
+else{
+result = n1 / n2;
+printf("%.2f",result);
+}
+break;
+}
+return 0;
+}
+7. Para o próximo exercício desenvolva utilizando a estrutura condicional (SE) e a seleção se múltipla escolha (ESCOLHA-CASO)  Criar um programa para identificar o valor a ser pago por um plano de saúde dada a idade do conveniado considerando que todos pagam R$ 100 mais um adicional conforme a seguinte tabela:
+1) crianças com menos de 10 anos pagam R$80;
+2) conveniados com idade entre 10 e 30anos pagam R$50;
+3) conveniados com idade entre 40 e 60 anos pagam R$ 95;
+4) conveniados com mais de 60 anos pagam R$130.
+#include <stdio.h>
+#include <stdlib.h> 
+int main()
+{
+int idade;
+float pbase=100,preco;
+printf("Digite a idade do conveniado: ");
+scanf("%d",&idade);
+if(idade < 10){
+ preco = pbase + 80;
+ printf("O preco eh: R$%.2f",preco);
+}
+if (idade >=10 && idade <=30){
+ preco = pbase + 50;
+ printf("O preco eh: R$%.2f",preco);
+}
+if (idade >= 40 && idade <= 60){
+ preco = pbase + 95;
+ printf("O preco eh: R$%.2f",preco);
+}
+if (idade>60){
+ preco = pbase + 130;
+ printf("O preco eh: R$%.2f",preco);
+}
+return 0;
+}
+Laboratório 5
+Vetores
+1. Faça um algoritmo que copie o conteúdo de um vetor em um segundo vetor.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+
+    int vet1[4], vet2[4];
+    int aux;
+
+    for(aux=0; aux <= 3; aux++){
+        printf("Digite um numero: ");
+        scanf("%d", &vet1[aux]);
+    }
+    for(aux=0; aux <= 3; aux++){
+        vet2[aux] = vet1[aux];
+    }
+    for(aux=0; aux <= 3; aux++){
+        printf("vet1: %d \n", vet1[aux]);
+    }
+    for(aux=0; aux <= 3; aux++){
+        printf("vet2: %d \n", vet2[aux]);
+    }
+    return 0;
+}
+2. Faça um algoritmo que some o conteúdo de dois vetores e armazene o resultado em um terceiro vetor.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+	int vet1[3], vet2[3], vetsoma[3],i,j,s;
+
+	for(i=0; i<1;i++){
+		printf("Digite um numero 1: ");
+		scanf("%d", &vet1[i]);
+	}
+
+    for(j=0; j<1;j++){
+        printf("Digite um numero 2: ");
+        scanf("%d", &vet2[j]);
+	}
+
+    for(s=0; s<1;s++){
+		vetsoma[s]= vet2[s] +  vet1[s];
+        printf(" %d\t + %d\t = %d \n", vet2[s],vet1[s],vetsoma[s]);
+	}
+          system("pause");
+
+return 0;
+}
+3. Faça um algoritmo que faça a união de dois vetores de mesmo tamanho e mesmo tipo em um terceiro vetor com dobro do tamanho.
+#include<math.h>
+#include<stdlib.h>
+#include<stdio.h>
+
+int main()
+{
+    int i=1,n,c=1;
+    float vetor1[n];
+    float vetor2[n];
+
+    printf("Digite tamanho vetor: ");
+    scanf("%i", &n);
+
+    for(i=1; i<=n; i++)
+        {
+            printf("Digite valor do vetor 1: ");
+            scanf("%f", &vetor1[i]);
+            }
+
+            for(i=1; i<=n; i++)
+                {
+                    printf("digite valor vetor 2: ");
+                    scanf("%f", &vetor2[i]);
+                    }
+                    for(i=1; i<=n; i++)
+                        {
+                            printf("Finalizado: %.0f\n", vetor1[i]);
+                    for(c=1; c<=n; c++)
+                    {
+                        printf("Finalizado: %.0f\n", vetor2[i]);
+                    }
+                    }
+                    }
+Matriz
+1. Faça um algoritmo para somar duas matrizes.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+	int matrizA[2][2], matrizB[2][2], matrizC[2][2];
+	int i,j, soma;
+
+	printf("Entre com os dados da matriz: ");
+
+	for(int i=0;i<2;i++){
+
+		for(int j=0;j<2;j++){
+			scanf("%d", &matrizA[i][j]);
+		}
+	}
+	printf("Entre com os dados da matriz: ");
+
+	for(int i=0;i<2;i++){
+
+		for(int j=0;j<2;j++){
+			scanf("%d", &matrizB[i][j]);
+		}
+	}
+	 for(int i=0;i<4;i++){
+	 	for(int j=0;j<4;j++){
+	 		matrizC[i][j] =  matrizA[i][j] + matrizB[i][j];
+	 		printf("%d",matrizC[i][j]);
+
+	}
+    printf("\n");
+}
+}
+2. Faça um algoritmo para calcular a transposta de uma matriz.
+#include <stdio.h>
+#define LIM 25
+
+void transposta(int a[LIM][LIM], int at[LIM][LIM], int m, int n)
+{
+    int i, j;
+    for (i = 0; i < m; i = i + 1)
+        for (j = 0; j < n; j = j + 1) at[j][i] = a[i][j];
+}
+
+int main(void)
+{
+    int i, j, m, n, mat[LIM][LIM], matTransp[LIM][LIM];
+    printf("Digite o numero: ");
+    scanf("%d", &m);
+
+    printf("Digite mais um numero: ");
+    scanf("%d", &n);
+
+    if (m < LIM && n < LIM)
+       {
+           for (i = 0; i < m; i = i + 1)
+               for (j = 0; j < n; j = j + 1)
+                   scanf("%d", &mat[i][j]);
+           printf("\n");
+           transposta(mat, matTransp, m, n);
+           for (i = 0; i < n; i = i + 1)
+           {
+               for (j = 0; j < m; j = j + 1)
+                   printf("%3d", matTransp[i][j]);
+               putchar('\n');
+           }
+       }
+       else printf("Matriz excessivamente grande!\n");
+       return 0;
+       }
+3. Faça um algoritmo que leia uma matriz mat 2 x 3 e imprima na tela a soma de todos os elementos da matriz mat.
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int i, j, soma = 0, mat[2][3];
+
+    srand(time(NULL));
+
+    for(i = 0; i < 2; i++){
+        for(j = 0; j < 3; j++){
+            mat[i][j] = rand() % 100;
+        }
+    }
+
+    for(i = 0; i < 2; i++){
+        for(j = 0; j < 3; j++){
+            soma += mat[i][j];
+            printf("%2d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n\nSoma total: %d\n\n", soma);
+
+    return 0;
+}
+4. Faça um algoritmo que leia uma matriz mat 4 x 4, e imprima na tela a soma dos elementos abaixo da diagonal principal da matriz mat.
+#include <stdio.h>
+#include <stdlib.h>
+#define LEN 4
+
+int main() {
+	int matriz[LEN][LEN];
+	int i, j, soma=0;
+
+	putchar('\n');
+	for (i=0; i<LEN; i++) {
+		for (j=0; j<LEN; j++) {
+			printf("Valor [linha %d][coluna %d]: ", (i+1), (j+1));
+			scanf("%d", &matriz[i][j]);
+
+			if (j<i) soma += matriz[i][j];
+		}
+		putchar('\n');
+	}
+
+	printf("Soma dos elementos abaixo da diagonal principal: %d.\n\n", soma);
+
+	return 0;
+	}
+Struct
+1.  Implemente um programa que leia o nome, a idade e o endereço de uma pessoa e armazene esses dados em uma estrutura. Em seguida, imprima na tela os dados da estrutura lida.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct cadastro {
+	char nome[40];
+	int idade;
+	char rua[60];
+	int numero;
+};
+
+int main() {
+	struct cadastro c;
+
+	printf("\n--- Cadastro---");
+
+	printf("\n--- Nome: ");
+	gets(c.nome);
+
+	printf("--- Idade: ");
+	scanf("%d", &c.idade);
+
+	fflush(stdin);
+
+	printf("--- Rua: ");
+	gets(c.rua);
+
+	printf("--- Numero: ");
+	scanf("%d", &c.numero);
+
+	printf("\n--- Cadastro Realizado ---");
+	printf("\n--- Nome: %s", c.nome);
+	printf("\n--- Idade: %d", c.idade);
+	printf("\n--- Rua: %s", c.rua);
+	printf("\n--- Numero: %d\n\n", c.idade);
+
+	return 0;
+}
+2. Crie uma estrutura representando um aluno de uma disciplina. Essa estrutura deve conter o número de matrícula do aluno, seu nome e as notas de três provas. Agora, escreva um programa que leia os dados de cinco alunos e os armazene nessa estrutura. Em seguida, exiba o nome e as notas do aluno que possui a maior média geral dentre os cinco.
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+struct DadosAluno
+{
+	int   matricula;
+	float nota1,nota2,nota3;
+	char  nome[30];
+};
+
+int main()
+{
+    struct DadosAluno aluno[3];
+    float somamedia=0,
+        media=0,
+        maiormedia=0;
+        int a = 0;
+        setlocale(LC_ALL,"Portuguese");
+
+        printf("\t\tCALCULANDO A MAIOR MÉDIA ENTRE 5 ALUNOS\n\n");
+
+        for (int i=0; i<5; i++)
+
+            {printf("Olá!\nPor favor, digite seu nome: ");
+            scanf ("%s", aluno[i].nome);
+
+            printf("%s, digite o número de sua matrícula: ", aluno[i].nome);
+            scanf ("%d",&aluno[i].matricula);
+
+            printf("Digite a primeira nota: ");
+            scanf ("%f",&aluno[i].nota1);
+
+            printf("Digite a segunda nota: ");
+            scanf ("%f",&aluno[i].nota2);
+
+            printf("Digite a terceira nota: ");
+            scanf ("%f",&aluno[i].nota3); printf("\n\n");
+
+            somamedia = aluno[i].nota1 + aluno[i].nota2 + aluno[i].nota3;
+            media = somamedia/3;
+
+            if(maiormedia < media)
+                {
+                    maiormedia = media;
+            a = i;
+            }
+            }
+            printf("A maior média é de %.2f, do aluno %s, matrícula de número %d.\n", maiormedia,aluno[a].nome,aluno[a].matricula);
+            return 0;
+            }
+3. Crie uma estrutura capaz de armazenar o nome e a data de nascimento de uma pessoa. Agora, escreva um programa que leia os dados de seis pessoas. Calcule e exiba os nomes da pessoa mais nova e da mais velha.
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#define MAX 6
+
+typedef struct {
+    int dia;
+	int mes;
+	int ano;
+	} data;
+
+	typedef struct {
+	    char nome[50];
+	    data dataNasc;
+	    int idade;
+	    } pessoa;
+
+int main() {
+    pessoa pessoas[MAX];
+	data dataAtual;
+	int i, iMaior, iMenor;
+	printf("\n---DATA ATUAL---\n");
+
+	printf("Digite o dia: ");
+	scanf("%d", &dataAtual.dia);
+
+	printf("Digite o mes: ");
+	scanf("%d", &dataAtual.mes);
+
+	printf("Digite o ano: ");
+	scanf("%d", &dataAtual.ano);
+
+	printf("DATA ATUAL: %d/%d/%d", dataAtual.dia, dataAtual.mes, dataAtual.ano);
+
+	printf("\n\n---CADASTRAR PESSOAS---");
+
+	for (i=0; i<MAX; i++) {
+		printf("\n---Pessoa %d----", (i+1));
+		printf("\nNome: ");
+		fflush(stdin);
+		gets(pessoas[i].nome);
+
+		printf("Data de nascimento (dia): ");
+		scanf("%d", &pessoas[i].dataNasc.dia);
+
+		printf("Data de nascimento (mes): ");
+		scanf("%d", &pessoas[i].dataNasc.mes);
+
+		printf("Data de nascimento (ano): ");
+		scanf("%d", &pessoas[i].dataNasc.ano);
+
+		pessoas[i].idade = dataAtual.ano - pessoas[i].dataNasc.ano;
+		if ((dataAtual.mes - pessoas[i].dataNasc.mes < 0) ||
+			(dataAtual.mes - pessoas[i].dataNasc.mes == 0 &&
+			dataAtual.dia - pessoas[i].dataNasc.dia < 0)) {
+				pessoas[i].idade--;
+				}
+				}
+
+				iMaior = iMenor = 0;
+
+				for (i=0; i<MAX; i++) {
+                        if (pessoas[i].idade > pessoas[iMaior].idade) {
+                            iMaior = i;
+                } else if (pessoas[i].idade < pessoas[iMenor].idade) {
+                    iMenor = i;
+                    }
+                    }
+
+                    printf("\n---RESULTADO---");
+                    printf("\nMaior idade: %s, com %d anos.", pessoas[iMaior].nome, pessoas[iMaior].idade);
+                    printf("\nMenor idade: %s, com %d anos.\n\n", pessoas[iMenor].nome, pessoas[iMenor].idade);
+                    }
+4. Escreva um programa que contenha uma estrutura representando uma data válida. Essa estrutura deve conter os campos dia, mês e ano. Em seguida, leia duas datas e armazene nessa estrutura. Calcule e exiba o número de dias que decorreram entre as duas datas.
+#include <stdio.h>
+#include <math.h>
+
+typedef struct dma_struct{
+    int dia;
+    int mes;
+    int ano;
+
+}dma;
+
+int main(){
+    dma data1, data2;
+    data1.dia = 12;
+    data1.mes = 2;
+    data1.ano = 1;
+
+    data2.dia = 20;
+    data2.mes = 1;
+    data2.ano = 2;
+
+    int diasData1 = (data1.dia)+(30*data1.mes)+(365*data1.ano);
+
+    int diasData2 = data2.dia+(30*data2.mes)+(365*data2.ano);
+
+    printf("Dias passadas para data 1: %d\n",  diasData1);
+    printf("Dias passadas para data 2: %d\n", diasData2);
+
+    printf("Diferenca entre o maior e menor: %d\n", abs(diasData1-diasData2));
+    }
+Funções
+1. Escreva uma função que receba por parâmetro dois números e retorne o maior deles.
+#include <stdio.h>
+#include <stdlib.h>
+
+int compara(int a, int b);
+
+    int main(){
+            int a,b, menor,maior;
+
+            printf("insira A: \n");
+                scanf("%d", &a);
+
+                printf("insira b: \n");
+                scanf("%d", &b);
+               maior = compara(a,b);
+                menor = compara(b,a);
+                printf("o menor numero eh: %d: \n", menor );
+                printf("o maior numero eh : %d: \n", maior);
+
+                return 0;
+    }
+
+    int compara(int A, int B){
+
+        if(A>B)
+                return A;
+
+        else
+            return B;
+
+        if(B>A)
+
+                return B;
+
+        else
+            return A;
+
+    }
+2. Faça uma função que receba um número inteiro de 1 a 12 e imprima em tela o mês e a sua quantidade de dias de acordo com o número digitado pelo usuário. Exemplo: Entrada = 4. Saída = abril.
+#include <stdio.h>
+
+void imprimaMes_1(){
+        printf("[Janeiro] //");
+}
+
+void imprimaMes_2(){
+        printf("[Fevereiro] //");
+}
+void imprimaMes_3(){
+        printf("[Marco ] //");
+}
+void imprimaMes_4(){
+        printf("[Abril] //");
+}
+void imprimaMes_5(){
+        printf("[Maio] //");
+}
+void imprimaMes_6(){
+        printf("[Junho] //");
+}
+void imprimaMes_7(){
+        printf("[Julho] //");
+}
+void imprimaMes_8(){
+        printf("[Agosto] //");
+}
+void imprimaMes_9(){
+        printf("[Setembro] //");
+}
+void imprimaMes_10(){
+        printf("[Outubro] //");
+}
+void imprimaMes_11(){
+        printf("[Novembro] //");
+}
+void imprimaMes_12(){
+        printf("[Dezembro] //");
+}
+int main()
+{
+        int mes,
+            dias=31;
+
+        printf("Digite o mes [1-12]: ");
+        scanf("%d", &mes);
+
+        if(mes>12 || mes<1)
+            printf("Mes invalido");
+        else
+            switch( mes )
+                {
+                case 1:
+                        imprimaMes_1();
+                        break;
+                    // fevereiro: subtraímos 2 dias aqui e 1 dia no próximo case
+                    case 2:
+                        imprimaMes_2();
+                        dias -=3;
+                        break;
+                    case 3:
+                        imprimaMes_3();
+                        break;
+                    //meses que possuem 30 dias: só subtraímos 1 dia
+                    case 4:
+                        imprimaMes_4();
+                        dias--;
+                        break;
+                    case 5:
+                        imprimaMes_5();
+                        break;
+                    case 6:
+                        imprimaMes_6();
+                        dias--;
+                        break;
+                    case 7:
+                        imprimaMes_7();
+                        break;
+                    case 8:
+                        imprimaMes_8();
+                        break;
+                    case 9:
+                        imprimaMes_9();
+                        dias--;
+                        break;
+                    case 11:
+                        imprimaMes_10();
+                        dias--;
+                        break;
+                    case 12:
+                        imprimaMes_3();
+                        break;
+                }
+
+        printf("O mes %d possui %d dias", mes, dias);
+
+}
+3. Escreva uma função que receba o peso (quilos) e a altura (metros) de uma pessoa. Calcule e retorne o IMC (Índice de Massa Corporal) dessa pessoa: IMC=peso/(altura*altura).
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(){
+    float peso,metros,imc;
+
+    printf("Entre com o teu peso : \n\n");
+    scanf("%f", &peso);
+
+    printf("Entre com  metros : \n\n");
+    scanf("%f", &metros);
+    imc = IMC_calculo(peso,metros); //chamada de funcao
+
+ printf("IMC: %f ", imc);
+    return 0;
+}
+
+void IMC_calculo(float peso1,float metros2,float IMC){
+IMC=peso1/(metros2*metros2);
+return IMC;
+}
+4. Escreva uma função que receba dois valores numéricos e um símbolo. Esse símbolo representará a operação que se deseja efetuar com os números. Assim, se o símbolo for “ + ”, deverá ser realizada uma adição, se for “ − ”, uma subtração, se for “/”, uma divisão, e, se for “*”, será efetuada uma multiplicação.
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int imprimirSomaAeB(int num1, int num2){ //+
+
+ int soma;
+ printf("Entre com numero 1:");
+ scanf("%d", &num1);
+ printf("Entre com numero 2:");
+  scanf("%d", &num2);
+  soma = num1 + num2;
+  printf("%d + %d = %d", num1,num2,soma);
+  return soma;
+}
+  int imprimirMenos(int num1, int num2){ // - menos
+
+int soma;
+printf("Entre com numero 1:");
+ scanf("%d", &num1);
+ printf("Entre com numero 2:");
+  scanf("%d", &num2);
+  soma = num1 - num2;
+  printf("%d - %d = %d", num1,num2,soma);
+  return soma;
+}
+int imprimirDivisao(int num1, int num2){ // divisao
+
+ int soma;
+ printf("Entre com numero 1:");
+ scanf("%d", &num1);
+ printf("Entre com numero 2:");
+  scanf("%d", &num2);
+   soma = num1 / num2;
+  printf("%.d / %d = %d",num1,num2,soma);
+  return soma;
+}
+int imprimirMultiplicao(int num1, int num2){ //* multiplicação
+
+ int soma;
+ printf("Entre com numero 1:");
+ scanf("%d", &num1);
+ printf("Entre com numero 2:");
+  scanf("%d", &num2);
+   soma = num1 * num2;
+  printf("%d X %d = %d", num1,num2,soma);
+  return soma;
+}
+int main() {
+
+  char op;
+  float n1, n2;
+  printf("Entre com o operator (+, -, *, /): ");
+  scanf("%c", &op);
+
+  switch(op){
+  			case '+':
+  				imprimirSomaAeB(n1,n2);
+  				break;
+    case '-':
+        imprimirMenos(n1,n2);
+      break;
+    case '*':
+     imprimirMultiplicao(n1,n2);
+      break;
+    case '/':
+      imprimirDivisao(n1,n2); // aqui ele chama a função + n1 e n1 da  ( int main () )
+      break;
+
+      default:
+      	printf("incorreta funçao");
+  }
+
+
+}
+5. Escreva uma função que receba um número inteiro positivo n. Calcule e retorne o seu fatorial n!: n! = n * ( – 1) * (n – 2) * ... * 1
+#include <stdio.h>
+#include <stdlib.h>
+
+int ChamaFatorial(int n){
+
+
+int fat;
+
+ for(fat=1; n >=1;n--) {
+
+      fat = fat * n;
+
+	printf("%d \t ",fat);
+
+}
+}
+
+	 int main(){
+
+	 	int num,i, result;
+
+	 	printf("Entre com um numero inteiro qualquer: ");
+	 	scanf("%d", &num);
+
+	 	result= ChamaFatorial(num);
+
+	 		printf("%d", result);
+	 		return 0;
+		 }
+6. Escreva uma função que receba um array contendo a nota de 10 alunos e retorne a média dos alunos. Escreva uma função que receba como parâmetro um vetor contendo N valores inteiros. Essa função deve retornar, por referência, dois valores: a soma dos números pares e ímpares.
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+	int main(void){
+
+		float nota[11],nota2[11],media1[11];
+		int impar=0, par=0;
+		int resultado;
+		int i;
+		int numero2[11];
+		int num=0;
+		int num2=0;
+    printf("=================Bem vindo Soma Semestral:=========================\n");
+    printf("O que deseja fazer:?\n");
+    printf("[1]-imprimir a media:?\n");
+    printf("[2]-Somar Valores e Ver qual deles e  par ou impar ?\n ");
+    printf("==============================================================\n");
+    scanf("%d", &num);
+    switch(num){
+
+
+
+
+    case 1:
+         printf("Voce selecionou o numero:  %d \n",num);
+		for(i=1;i<11;i++){
+			for(i=1;i<11;i++){
+           printf("Insira a NP1  %d: ",i );
+           scanf("%f",&nota[i]);
+           printf("Insira a NP2 %d: ",i );
+           scanf("%f",&nota2[i]);
+	}
+
+	}
+
+           printf("=========================\n\n");
+		for(i=1;i<11;i++){
+           media1[i]  =(nota2[i]+nota[i])/2;
+           printf("nota do aluno np1  %.1f \n",nota[i]);
+			printf("nota do aluno np2  %.1f \n", nota2[i]);
+			 printf("Media: %.2f \n", media1[i]);
+
+
+	}
+
+	case 2:
+
+        numero2[i]  = ChamaSomaImparePar(impar,par);
+            break;
+
+			default:
+					printf("[Valor incorreto Tente novamente]");
+					break;
+					return 0;
+}
+}
+
+int ChamaSomaImparePar(int soma_par , int soma_impar){
+int i;
+int n;
+int numero2[11];
+printf("Você selecionou o numero [2]:\n");
+
+	for(i=0;i<4;i++){
+
+		printf("Digite um numero inteiro: \n");
+		scanf("%d", &numero2[i]);
+		if(numero2[i]%2==0){
+
+		soma_par = soma_par +numero2[i];// igual a soma_par = soma_par + numero;
+	}else{
+		 soma_impar = soma_impar + numero2[i];
+}
+		}
+	printf("a soma dos numeros pares é: %d \n",soma_par);
+		printf("a soma dos numeros impares é: %d \n",soma_impar);
+		exit(0);
+
+}
+Ponteiro
+1. Escreva um programa que contenha duas variáveis inteiras. Compare seus endereços e exiba o maior endereço.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (void){
+    int x = 6, y = 8;
+    int *Endx = &x , *Endy = &y;
+
+    printf("\tA = %d     B = %d\n\n",x, y);
+
+    printf("Endereco de A = %d\nEndereco de B = %d\n",Endx, Endy);
+
+    if(Endx > Endy){
+            if(&x > &y)
+            printf("\n\nEndereco %d de A eh maior: \n",Endx);
+    }else{
+    printf("\n\nEndereco %d de B eh maior: \n",Endy);
+    }
+    return EXIT_SUCCESS;
+    }
+2. Escreva um programa que contenha duas variáveis inteiras. Leia essas variáveis do teclado. Em seguida, compare seus endereços e exiba o conteúdo do maior endereço.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (void){
+
+    int x, y;
+
+    printf("\tDigite o valor de x: ");
+    scanf("%d",&x);
+
+    printf("\n\tDigite o valor y: ");
+    scanf("%d",&y);
+
+    printf("\nValor de x = %i\nValor de y = %i\n\n",x, y);
+
+    int *Endx = &x, *Endy = &y;
+
+    printf("Endereco de x = %i\nEndereco de y = %i\n\n",Endx, Endy);
+
+    if(Endx > Endy){
+            printf("\n\nEndereco %d de x eh maior:",Endx);
+    }else{
+        printf("\n\nEndereco %d de y eh maior:", Endy);
+        }
+        printf("\n\n");
+        return EXIT_SUCCESS;
+        }
+3. Crie um programa que contenha um array com cinco elementos inteiros. Leia esse array do teclado e imprima o endereço das posições contendo valores pares.
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 5
+
+int main (void){
+    int vet[SIZE], i;
+    int *Endvet;
+    Endvet = vet;
+
+    printf("\tDigite %d elementos:\n",SIZE);
+
+    for(i = 0; i < SIZE; i++){
+            printf("%d: ",i+1);
+            scanf("%d", &vet[i]);
+            }
+
+            printf("\n\tELEMENTOS:\n\n");
+            for(i = 0; i < SIZE; i++){
+                    printf("%d  ",vet[i]);
+            }
+            printf("\n\nENDERECOS DO ARRAY:\n");
+
+            for(i = 0; i < SIZE; i++){
+                    printf("%i : %i : %i\n",i+1, vet[i], Endvet++);
+                    }
+                    printf("\nENDERECOS DO ARRAY PAR:\n");
+                    Endvet = vet;
+
+                    for(i = 0; i < SIZE; i++){
+                            if(vet[i] %2 == 0){
+                                printf("\nNumero %d eh par : Posicao = %d",vet[i], Endvet);
+                    }
+                    Endvet++;
+                    }
+                    }
+Arquivos
+1. Faça um programa que leia um arquivo texto contendo uma lista de compras. Cada linha do arquivo possui nome, quantidade e valor unitário do produto. O programa então exibe o total da compra.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char prod[30];
+    float qtd,valor,total = 0.0;
+    FILE *f = fopen("compras.txt","r");
+    if(f==NULL){
+        printf("Erro na abertura do arquivo\n");
+        system("pause");
+        exit(1);
+        }
+        while(!feof(f)){
+            fscanf(f,"%s %f %f",&prod,&qtd,&valor);
+            total += qtd * valor;
+
+        }
+        printf("Total = %f\n",total);
+        system("pause");
+
+    return 0;
+}
+2. Faça um programa que permita que o usuário entre com diversos nomes e telefone para cadastro. Crie um arquivo com essas informações, uma por linha. O usuário finaliza a entrada com o valor 0 para o telefone.
+#include <stdio.h>
+#include <stdlib.h>
+
+FILE* openArquivo(char modo, char caminho[30]){
+    FILE *arquivo;
+    switch(modo){
+        case 'g':
+            arquivo = fopen(caminho,"wt");
+            break;
+        case 'l':
+            arquivo = fopen(caminho,"rt");
+            break;
+        case 'a':
+            arquivo = fopen(caminho,"a");
+            break;
+    }
+    if(arquivo==NULL){
+        printf("Nao foi possivel abrir o arquivo");
+        exit(0);
+    }
+    return arquivo;
+}
+
+void FecharArquivo(FILE *arquivo){
+    fclose(arquivo);
+}
+
+void Cadastra(char nome[30], int telefone){
+    FILE *arquivo;
+    arquivo = openArquivo('a', "contatos.txt");
+    fprintf(arquivo, "%s %d \n", nome, telefone);
+    FecharArquivo(arquivo);
+}
+
+void Listar(){
+    FILE *arquivo;
+    char nome[30];
+    int telefone;
+
+
+    arquivo = openArquivo('l',"contatos.txt");
+
+    while(fscanf(arquivo,"%s %d ", &nome, &telefone)!=EOF){
+
+       printf("nome: %s  - telefone: %d \n" , nome, telefone);
+    }
+    FecharArquivo(arquivo);
+}
+
+int main(){
+    int opcao;
+    char nome[30];
+    int telefone;
+    do{
+        system("cls");
+        printf("\n\n\t\tBem Vindo ao contatos \n");
+        printf("\n 1 - Fazer lista ");
+        printf("\n 2 - Listar de contatos");
+        printf("\n 3 - Sair");
+
+        printf("\nDigite uma opcao: ");
+        scanf("%d", &opcao);
+        system("cls");
+
+        switch(opcao){
+            case 1:
+                printf("\nDigite o nome : ");
+                setbuf(stdin,NULL);
+                gets(nome);
+
+                fflush(stdin);
+
+                printf("\nInforme o telefone: ");
+                scanf("%d",&telefone);
+
+                Cadastra(nome, telefone);
+                system("pause");
+                break;
+            case 2:
+                Listar();
+                system("pause");
+                break;
+            case 3:
+                printf("\n\nFinalizando...\n\n");
+                system("pause");
+                exit(0);
+                break;
+
+            default:
+                printf("\n\nOpcao invalida! Tente Novamente!\n\n");
+                system("pause");
+
+        }
+    }while(opcao!=3);
+
+    return 0;
+}
+3. Dado um arquivo contendo um conjunto de nomes e datas de nascimento (dia, mês e ano, isto é, três inteiros seguidos), escrever um programa que leia esse arquivo e a data atual e gere outro arquivo contendo o nome e a idade.
+#include <stdio.h>
+#include <stdlib.h>
+
+FILE* openArquivo(char modo, char caminho[30]){
+    FILE *arquivo;
+    switch(modo){
+        case 'g':
+            arquivo = fopen(caminho,"wt");
+            break;
+        case 'l':
+            arquivo = fopen(caminho,"rt");
+            break;
+        case 'a':
+            arquivo = fopen(caminho,"a");
+            break;
+    }
+    if(arquivo==NULL){
+        printf("Nao foi possivel abrir o arquivo");
+        exit(0);
+    }
+    return arquivo;
+}
+
+void FecharArquivo(FILE *arquivo){
+    fclose(arquivo);
+}
+
+void Cadastra(char nome[30], int dia, int mes, int ano, int idade){
+    int atual=2022;
+    FILE *arquivo;
+    arquivo = openArquivo('a', "datanasc.txt");
+    fprintf(arquivo, "%s %d %d %d %d %d\n", nome, dia, mes, ano, idade, atual);
+    FecharArquivo(arquivo);
+}
+
+void Listar(){
+    FILE *arquivo;
+    char nome[30];
+    int dia, mes, ano, idade, atual;
+
+
+    arquivo = openArquivo('l',"datanasc.txt");
+
+    while(fscanf(arquivo,"%s %d %d %d %d %d", &nome, &dia, &mes, &ano, &idade, &atual)!=EOF){
+             if(dia>31){
+                printf("dia invalido\n");
+                system("pause");
+             };
+             if(mes>12){
+                printf("mes invalido\n");
+                system("pause");
+             };
+              idade=atual-ano;
+
+       printf("nome: %s  -  dia %d/mes %d/ano %d\n", nome, dia, mes, ano);
+       printf("nome: %s - idade: %d\n", nome, idade);
+    }
+    FecharArquivo(arquivo);
+}
+
+int main(){
+    int opcao;
+    char nome[30];
+    int dia, mes, ano, idade;
+    do{
+        system("cls");
+        printf("\n\n\t\tBem Vindo \n");
+        printf("\n 1 - Fazer lista ");
+        printf("\n 2 - Listar de nomes");
+        printf("\n 3 - Sair");
+
+        printf("\nDigite uma opcao: ");
+        scanf("%d", &opcao);
+        system("cls");
+
+        switch(opcao){
+            case 1:
+                printf("\nDigite o nome : ");
+                setbuf(stdin,NULL);
+                gets(nome);
+
+                fflush(stdin);
+
+                printf("\nInforme o dia: ");
+                scanf("%d",&dia);
+
+                printf("\nInforme o mes: ");
+                scanf("%d",&mes);
+
+                printf("\nInforme o ano: ");
+                scanf("%d",&ano);
+
+
+                Cadastra(nome, dia, mes, ano, idade);
+                system("pause");
+                break;
+            case 2:
+                Listar();
+                system("pause");
+                break;
+            case 3:
+                printf("\n\nFinalizando...\n\n");
+                system("pause");
+                exit(0);
+                break;
+
+            default:
+                printf("\n\nOpcao invalida! Tente Novamente!\n\n");
+                system("pause");
+
+        }
+    }while(opcao!=3);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
